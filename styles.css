@@ -516,10 +516,12 @@ body {
 }
 
 .benefits-title {
-  color: #3b82f6;
-  font-size: 0.875rem;
+  color: #6c5ce7;
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .benefits-heading {
@@ -1022,9 +1024,12 @@ body {
 
 .faq-label {
   text-align: center;
-  color: #6366f1;
-  font-size: 0.875rem;
-  margin-bottom: 0.5rem;
+  color: #6c5ce7;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .faq-title {
@@ -1055,7 +1060,7 @@ body {
 
 .faq-question {
   background: none;
-  border: none;
+  border-radius: 50px;
   width: 100%;
   text-align: left;
   padding: 1.5rem;
@@ -1170,17 +1175,24 @@ body {
   border-radius: 1rem;
 }
 
+.containerlast {
+  position: relative;
+  z-index: 3;
+  margin: 0 auto;
+  padding-bottom: 17rem;
+}
+
 .main-heading {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #ffffff;
+  color: black;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .sub-heading {
   font-size: 1.25rem;
-  color: #f3f4f6;
+  color: #000;
   margin-bottom: 2rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
