@@ -165,7 +165,10 @@ body {
 
 /* Hero section styles */
 .hero {
-  padding: 8rem 2rem;
+  padding-top: 8rem;
+  padding-bottom: 3rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
   background: #f8f5ff;
   min-height: 100vh;
   display: flex;
@@ -233,7 +236,8 @@ body {
 
 /* Problem Section Styles */
 .problem-section {
-  padding: 6rem 2rem;
+  padding-top: 1rem;
+  padding-bottom: 6rem;
   text-align: center;
   color: aliceblue;
 }
@@ -284,7 +288,7 @@ body {
 
 /* Solution section styles */
 .solution-section {
-  padding: 6rem 2rem;
+  padding: 5rem 1rem;
   text-align: center;
   border-radius: 12px;
   background-color: #111;
@@ -508,7 +512,7 @@ body {
 
 .benefits-section {
   text-align: center;
-  padding: 4rem 0;
+  padding-top: 4rem;
 }
 
 .benefits-title {
@@ -1031,6 +1035,12 @@ body {
   margin-bottom: 3rem;
 }
 
+.container3box {
+  position: relative;
+  z-index: 3;
+  margin: 0 auto;
+  padding-top: 4.5rem;
+}
 .faq-list {
   max-width: 800px;
   margin: 0 auto;
@@ -1132,6 +1142,7 @@ body {
 
 .mockup-section {
   position: absolute;
+  margin-bottom: 200;
   top: 0;
   left: 0;
   width: 100%;
@@ -1140,7 +1151,6 @@ body {
 }
 
 .mockup-image {
-  filter: blur(12px);
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1150,9 +1160,8 @@ body {
 .container {
   position: relative;
   z-index: 3;
-
   margin: 0 auto;
-  padding: 2rem;
+  padding-top: 0.3rem;
 }
 
 .cta-section {

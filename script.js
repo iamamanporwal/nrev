@@ -16,11 +16,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const tabButtons = document.querySelectorAll(".tab-button");
   let currentIndex = 0;
   let slideshowInterval;
+  const slideIntervalTime = 5000; // 5 seconds
 
   function showImage(index) {
+    // Remove active class from all screenshots and buttons
     screenshots.forEach((img) => img.classList.remove("active"));
     tabButtons.forEach((btn) => btn.classList.remove("active"));
 
+    // Add active class to the current screenshot and button
     screenshots[index].classList.add("active");
     tabButtons[index].classList.add("active");
     currentIndex = index;
@@ -31,29 +34,24 @@ document.addEventListener("DOMContentLoaded", function () {
     showImage(currentIndex);
   }
 
-  // Start slideshow
+  // Start the slideshow with interval
   function startSlideshow() {
-    slideshowInterval = setInterval(nextImage, 5000);
+    slideshowInterval = setInterval(nextImage, slideIntervalTime);
   }
 
-  // Stop slideshow on user interaction
+  // Stop the slideshow
   function stopSlideshow() {
     clearInterval(slideshowInterval);
   }
 
   // Handle tab button clicks
-  tabButtons.forEach((button) => {
+  tabButtons.forEach((button, index) => {
     button.addEventListener("click", () => {
-      stopSlideshow();
-      const index = parseInt(button.dataset.index);
-      showImage(index);
-      // Restart slideshow after user interaction
-      setTimeout(startSlideshow, 10000);
+      stopSlideshow(); // Stop the slideshow on user interaction
+      showImage(index); // Show the selected image
+      setTimeout(startSlideshow, 10000); // Restart slideshow after delay
     });
   });
-
-  // Initialize slideshow
-  startSlideshow();
 
   // Hover effect for screenshots
   const screenshotContainer = document.querySelector(".screenshot-container");
@@ -79,9 +77,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Stop slideshow when user hovers over the container
+  // Pause slideshow on hover and resume on mouse leave
   screenshotContainer.addEventListener("mouseenter", stopSlideshow);
   screenshotContainer.addEventListener("mouseleave", startSlideshow);
+
+  // Start the slideshow initially
+  startSlideshow();
 });
 
 document.querySelectorAll(".stat").forEach((stat) => {
