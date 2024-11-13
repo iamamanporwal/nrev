@@ -1140,7 +1140,7 @@ body {
 }
 
 .mockup-image {
-  filter: blur(5px);
+  filter: blur(12px);
   width: 100%;
   height: 100%;
   object-fit: cover;
